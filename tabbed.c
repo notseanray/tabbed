@@ -173,6 +173,8 @@ static const char *geometry;
 static Colormap cmap;
 static Visual *visual = NULL;
 
+Bool previous_use = False;
+
 char *argv0;
 
 /* configuration, allows nested code to access above variables */
@@ -330,6 +332,10 @@ drawbar(void)
 		XCopyArea(dpy, dc.drawable, win, dc.gc, 0, 0, ww, bh, 0, 0);
 		XSync(dpy, False);
 
+		// close tabbed if there are no tabs, but we have used it before
+		if (previous_use)
+			exit(EXIT_SUCCESS);
+
 		return;
 	}
 
@@ -370,6 +376,8 @@ drawbar(void)
 	}
 	XCopyArea(dpy, dc.drawable, win, dc.gc, 0, 0, ww, bh, 0, 0);
 	XSync(dpy, False);
+	// We have at least 1 tab open, so we are able to close it with no issues in the future
+	previous_use = True;
 }
 
 void

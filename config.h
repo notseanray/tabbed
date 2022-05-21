@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "Iosevka Light Extended Oblique:pixelsize=10:antialiasing=true";
+static const char font[]        = "Iosevka term:pixelsize=12:antialiasing=true";
 static const char* normbgcolor  = "#222222";
 static const char* normfgcolor  = "#cccccc";
 static const char* selbgcolor   = "#555555";
