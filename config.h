@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "Iosevka term:pixelsize=12:antialiasing=true";
-static const char* normbgcolor  = "#222222";
+static const char font[]        = "JetBrains Mono:pixelsize=12:antialiasing=true";
+static const char* normbgcolor  = "#27282d";
 static const char* normfgcolor  = "#cccccc";
-static const char* selbgcolor   = "#555555";
-static const char* selfgcolor   = "#ffffff";
-static const char* urgbgcolor   = "#111111";
-static const char* urgfgcolor   = "#cc0000";
+static const char* selbgcolor   = "#1e222a";
+static const char* selfgcolor   = "#c6d6f7";
+static const char* urgbgcolor   = "#e98b4d";
+static const char* urgfgcolor   = "#d76d68";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const char titletrim[]   = "...";
